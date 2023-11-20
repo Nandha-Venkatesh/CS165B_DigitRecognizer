@@ -116,8 +116,6 @@ def gradient_descent(X, y, learning_rate, max_iter):
         gradient = (gradient/N)
         loss = (loss/N)
 
-        print("Gradient = ", gradient)
-        print("Loss =", loss)
         return gradient, loss
 
          # Gradient Solver
@@ -131,7 +129,6 @@ def gradient_descent(X, y, learning_rate, max_iter):
         # Adjust weights: w = w - learning_rate * gradient
         grad, loss = gradient()
         w = w - (learning_rate * grad)
-        print("Weights = ", w)
 
         # Check if converged
         loss_list.append(loss)
@@ -150,13 +147,10 @@ data = np.array(data)
 
 # Running the GD algorithm
 w = gradient_descent(data, train_labels, 1, 10000)
-print(w)
 
 a = -1 * w[1] / w[2] # Slope
 b = -1 * w[0] / w[2] # Y intercept
 c = -1 * w[0] / w[1] # X intercept
-
-print(a, b)
 
 x = [-1, 0.2]   # Arbitrary X values to plot the line through so it shows well on the graph.
 c = a * -1 + b
@@ -178,6 +172,7 @@ for i in range(len(data2)):
         plt.plot(data2[i][0], data2[i][1], 'rx', label='5')
     else:
         plt.plot(data2[i][0], data2[i][1], 'rx')
+
 plt.legend()
 plt.xlabel("Average Intensity")
 plt.ylabel("Symmetry")

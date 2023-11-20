@@ -1,0 +1,3 @@
+# CS165B_DigitRecognizer
+
+This was one of my school projects. I completed this project locally a few months ago so I decided to create a github repo for it. All of the code is complete and works perfectly. It uses grayscale training data from 16x16 images of the handwritten digits 1 and 5 to classify test data of the handwritten digits using logistic regression solved with the gradient descent algorithm. In theory, this basic gradient descent algorithm can be used for classification in a variety of applications. Though there are Python libraries to achieve the same results with less code, the point of this project was to prove our deeper understanding of the algorithm while practicing writing Python code.
